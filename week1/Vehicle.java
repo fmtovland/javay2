@@ -51,4 +51,9 @@ public class Vehicle
 	{
 		this.ownerName=owner;
 	}
+
+	public String toString()
+	{
+		return("Owned by: "+ownerName+"registered as: "+regNumber+"top speed of: "+maxSpeed+"Km/H"+"Colour: "+colour+"automatic"+automatic+"Wheels:"+numberOfWheels);
+	}
 }
