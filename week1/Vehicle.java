@@ -21,17 +21,17 @@ public class Vehicle
 	//constructer for vehicle
 	Public Vehicle(String owner, String reg, String topSpeed, String colour, bool automatic, int wheels) //constructer
 	{
-		self.ownerName=owner;
-		self.regNumber=reg;
-		self.topSpeed=maxSpeed;
-		self.colour=colour;
-		self.automatic=automatic;
-		self.numberOfWheels=wheels;
+		this.ownerName=owner;
+		this.regNumber=reg;
+		this.topSpeed=maxSpeed;
+		this.colour=colour;
+		this.automatic=automatic;
+		this.numberOfWheels=wheels;
 	}//end constructer or vehicle
 
 	//a simpler constructor for a vehicle
 	Public Vehicle(String owner)
 	{
-		self.ownerName=owner;
+		this.ownerName=owner;
 	}
 }
