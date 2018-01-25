@@ -27,6 +27,23 @@ public class Vehicle
 		this.colour=colour;
 		this.automatic=automatic;
 		this.numberOfWheels=wheels;
+
+		System.out.println("Owned by: "+owner);
+		System.out.println("registered as: "+reg);
+		System.out.println("top speed of: "+topSpeed+"Km/H");
+		System.out.println("Colour: "+colour);
+		//specific output for automatic
+		if(automatic)
+		{
+			System.out.println("automatic: yes");
+		}
+		else
+		{
+			System.out.println("automatic: no");
+		}
+
+		System.out.println("Wheels:"+wheels);
+
 	}//end constructer or vehicle
 
 	//a simpler constructor for a vehicle

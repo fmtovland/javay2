@@ -14,6 +14,6 @@ public class HelloWorld
 {
 	public static void main(String[] args) //the s in string is case sensitive and must be capital
 	{
-		Vehicle car1 = new Vehicle("martin joseph");
+		Vehicle car1 = new Vehicle("martin joseph","92 D 8808","80","blue",true,4);
 	}
 }
