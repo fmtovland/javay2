@@ -28,4 +28,10 @@ public class Vehicle
 		self.automatic=automatic;
 		self.numberOfWheels=wheels;
 	}//end constructer or vehicle
+
+	//a simpler constructor for a vehicle
+	Public Vehicle(String owner)
+	{
+		self.ownerName=owner;
+	}
 }
