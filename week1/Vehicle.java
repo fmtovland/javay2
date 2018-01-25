@@ -54,6 +54,6 @@ public class Vehicle
 
 	public String toString()
 	{
-		return("Owned by: "+ownerName+"registered as: "+regNumber+"top speed of: "+maxSpeed+"Km/H"+"Colour: "+colour+"automatic"+automatic+"Wheels:"+numberOfWheels);
+		return("Owned by: "+ownerName+"\nregistered as: "+regNumber+"\ntop speed of: "+maxSpeed+"Km/H"+"\nColour: "+colour+"\nautomatic"+automatic+"\nWheels:"+numberOfWheels);
 	}
 }
