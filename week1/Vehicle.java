@@ -7,7 +7,7 @@ Kernel: 4.14.14-1-ARCH
 Java Version: 1.8.0_162
 */
 
-package org.lab1.test;	//put this class in the same package as hello world
+package com.lab1.test;	//put this class in the same package as hello world
 
 public class Vehicle
 {
