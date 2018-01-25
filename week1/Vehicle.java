@@ -15,22 +15,22 @@ public class Vehicle
 	String regNumber;
 	String maxSpeed;
 	String colour;
-	bool automatic;
+	boolean automatic;
 	int numberOfWheels;
 
 	//constructer for vehicle
-	Public Vehicle(String owner, String reg, String topSpeed, String colour, bool automatic, int wheels) //constructer
+	public Vehicle(String owner, String reg, String topSpeed, String colour, boolean automatic, int wheels) //constructer
 	{
 		this.ownerName=owner;
 		this.regNumber=reg;
-		this.topSpeed=maxSpeed;
+		this.maxSpeed=topSpeed;
 		this.colour=colour;
 		this.automatic=automatic;
 		this.numberOfWheels=wheels;
 	}//end constructer or vehicle
 
 	//a simpler constructor for a vehicle
-	Public Vehicle(String owner)
+	public Vehicle(String owner)
 	{
 		this.ownerName=owner;
 	}
