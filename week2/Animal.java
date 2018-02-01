@@ -10,6 +10,19 @@ public class Animal
 	private String colour="Unknown";
 	private int legs=4;
 
+
+	public void makeNoise()	//say  woof, meow etc
+	{
+		if(breed == "dog" || breed == "collie" || breed == "dalmation")
+			System.out.println("Woof!");
+		else if(breed == "duck")
+			System.out.println("Quack!");
+		else if(breed == "rabbit" || breed == "bunny" || breed == "bunny wabbit")
+			System.out.println("Whats up doc?");
+		else
+			System.out.println("He got stagefright. Poor thing.");
+	}
+
 	public Animal(String name)
 	{
 		this.name=name;
@@ -110,4 +123,5 @@ public class Animal
 	{
 		return this.legs;
 	}
+
 }
