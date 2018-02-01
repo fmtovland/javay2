@@ -4,10 +4,10 @@ public class Animal
 {
 
 	String name;
-	String breed;
+	String breed="Unknown";
 	int age;
 	boolean domesticAnimal;
-	String colour;
+	String colour="Unknown";
 	int legs;
 
 	public Animal(String name)
