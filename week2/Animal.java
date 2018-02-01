@@ -10,6 +10,13 @@ public class Animal
 	private String colour="Unknown";
 	private int legs=4;
 
+	public void makeNoise(boolean old)
+	{
+		if(old)
+			System.out.println("*Wheezes softly*");
+		else
+			this.makeNoise();
+	}
 
 	public void makeNoise()	//say  woof, meow etc
 	{

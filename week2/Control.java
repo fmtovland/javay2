@@ -11,15 +11,15 @@ public class Control
 		Animal bugs=new Animal("Bugs","bunny wabbit",78,false,"Gray",2);
 
 		System.out.println(spot);
-		spot.makeNoise();
+		spot.makeNoise(spot.getAge() > 10);
 		System.out.println(leo);
-		leo.makeNoise();
+		leo.makeNoise(leo.getAge() > 10);
 		System.out.println(stitch);
-		stitch.makeNoise();
+		stitch.makeNoise(stitch.getAge() > 10);
 		System.out.println(elliot);
-		elliot.makeNoise();
+		elliot.makeNoise(elliot.getAge() > 10);
 		System.out.println(bugs);
-		bugs.makeNoise();
+		bugs.makeNoise(bugs.getAge() > 10);
 
 		bugs.setName("Daffy");
 		System.out.println(bugs.getName());
