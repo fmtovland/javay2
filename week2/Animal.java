@@ -8,7 +8,7 @@ public class Animal
 	private int age;
 	private boolean domesticAnimal;
 	private String colour="Unknown";
-	private int legs;
+	private int legs=4;
 
 	public Animal(String name)
 	{
@@ -48,9 +48,9 @@ public class Animal
 
 	}
 
-	public void setName(String newName)	//change the name of the animal
+	public void setName(String changed)	//change the name of the animal
 	{
-		this.name=newName;
+		this.name=changed;
 	}
 
 	public String getName()
@@ -58,4 +58,56 @@ public class Animal
 		return this.name;
 	}
 
+	public void setBreed(String changed)	//change the breed of the animal
+	{
+		this.breed=changed;
+	}
+
+	public String getBreed()
+	{
+		return this.breed;
+	}
+
+	public void setAge(int changed)	//change the age of the animal
+	{
+		this.age=changed;
+	}
+
+	public int getAge()
+	{
+		return this.age;
+	}
+
+	public void toggleDomestic()		//switch the animal to domestic or wild
+	{
+		if(domesticAnimal)
+			domesticAnimal=false;
+		else
+			domesticAnimal=true;
+	}
+
+	public boolean getDomestic()
+	{
+		return this.domesticAnimal;
+	}
+
+	public void setColour(String changed)
+	{
+		this.colour=changed;
+	}
+
+	public String getColour()
+	{
+		return this.colour;
+	}
+
+	public void setLegs(int changed)
+	{
+		this.legs=changed;
+	}
+
+	public int getLegs()
+	{
+		return this.legs;
+	}
 }

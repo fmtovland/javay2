@@ -18,5 +18,20 @@ public class Control
 
 		bugs.setName("Daffy");
 		System.out.println(bugs.getName());
+
+		leo.setBreed("Collie");
+		System.out.println("Breed: "+leo.getBreed());
+
+		leo.setAge(12);
+		System.out.println("Age: "+leo.getAge());
+
+		leo.toggleDomestic();
+		System.out.println("domestic: "+leo.getDomestic());
+
+		leo.setColour("red");
+		System.out.println("Colour: "+leo.getColour());
+
+		leo.setLegs(3);
+		System.out.println("Legs: "+leo.getLegs());
 	}
 }
