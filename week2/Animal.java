@@ -29,12 +29,12 @@ public class Animal
 	{
 		String returnable;
 
-		returnable="This animal is called "+name+", ";		//add name to string
-		returnable=returnable+"is a "+breed+" that is "+colour+" in colour. ";	//add breed and colour
+		returnable="This animal is called "+name+". ";		//add name to string
+		returnable=returnable+"he is a "+breed+" that is "+colour+" in colour. ";	//add breed and colour
 		returnable=returnable+"he is "+Integer.toString(age)+" years old. ";	//add age
 		if(domesticAnimal)		//add domestic or not
 		{
-			returnable=returnable+"He is a domestic animal.";
+			returnable=returnable+"He is a domestic animal. ";
 		}
 
 		else
