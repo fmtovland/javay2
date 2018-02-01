@@ -16,7 +16,7 @@ public class Control
 		System.out.println(elliot);
 		System.out.println(bugs);
 
-		bugs.name="Daffy";
-		System.out.println(bugs.name);
+		bugs.setName("Daffy");
+		System.out.println(bugs.getName());
 	}
 }

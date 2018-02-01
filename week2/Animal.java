@@ -47,4 +47,15 @@ public class Animal
 		return returnable;
 
 	}
+
+	public void setName(String newName)	//change the name of the animal
+	{
+		this.name=newName;
+	}
+
+	public String getName()
+	{
+		return this.name;
+	}
+
 }
