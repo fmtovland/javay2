@@ -3,12 +3,12 @@ package com.labs.week2;
 public class Animal
 {
 
-	String name;
-	String breed="Unknown";
-	int age;
-	boolean domesticAnimal;
-	String colour="Unknown";
-	int legs;
+	private String name;
+	private String breed="Unknown";
+	private int age;
+	private boolean domesticAnimal;
+	private String colour="Unknown";
+	private int legs;
 
 	public Animal(String name)
 	{
