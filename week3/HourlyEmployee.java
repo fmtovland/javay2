@@ -11,8 +11,8 @@ package com.labs.week3;
 
 public class HourlyEmployee extends Employee
 {
-	double hoursWorked;
-	double hourlyRate;
+	private double hoursWorked;
+	private double hourlyRate;
 
 	public void sethoursWorked(double hoursWorked)
 	{
