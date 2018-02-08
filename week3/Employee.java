@@ -68,4 +68,13 @@ class Employee
 	{
 		return this.annualSalary/12;
 	}
+
+	public String toString()
+	{
+		String returnable="";
+		returnable=returnable+"This Employee is called "+firstName+" "+surName+"\n";
+		returnable=returnable+"Their staff number is "+staffNumber+"\n";
+		returnable=returnable+"Their salary is "+annualSalary;
+		return returnable;
+	}
 }
