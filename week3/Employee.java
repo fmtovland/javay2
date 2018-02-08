@@ -11,10 +11,10 @@ package com.labs.week3;
 
 class Employee
 {
-	String firstName;
-	String surName;
-	int staffNumber;
-	double annualSalary;
+	private String firstName;
+	private String surName;
+	private int staffNumber;
+	private double annualSalary;
 
 	Employee(String firstName, String surName, int staffNumber, double annualSalary)
 	{
