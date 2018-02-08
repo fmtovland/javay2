@@ -11,7 +11,7 @@ package com.labs.week3;
 
 public class CommissionEmployee extends Employee
 {
-	double commissionEarned;
+	private double commissionEarned;
 
 	CommissionEmployee(String firstName, String surName, int staffNumber, double annualSalary, double commissionEarned)
 	{
@@ -19,4 +19,27 @@ public class CommissionEmployee extends Employee
 		this.commissionEarned=commissionEarned;
 
 	}
+
+	public String toString()
+	{
+		String returnable=super.toString();
+		returnable=returnable+commissionEarned+" was his commission\n";
+		return returnable;
+	}
+
+	public double calculatePay()
+	{
+		return super.calculatePay() + commissionEarned;
+	}
+
+	public void setcommissionEarned(double commissionEarned)
+	{
+		this.commissionEarned=commissionEarned;
+	}
+
+	public double getcommissionEarned()
+	{
+		return this.commissionEarned;
+	}
+
 }
