@@ -14,11 +14,33 @@ public class HourlyEmployee extends Employee
 	double hoursWorked;
 	double hourlyRate;
 
-	HourlyEmployee(String firstName, String surName, int staffNumber, double annualSalary,double hoursWorked,double hourlyRate)
+	public void sethoursWorked(double hoursWorked)
 	{
-		super(firstName,surName,staffNumber,annualSalary);
+		this.hoursWorked=hoursWorked;
+	}
+
+	public double gethoursWorked()
+	{
+		return this.hoursWorked;
+	}
+
+	public void sethourlyRate(double hourlyRate)
+	{
+		this.hourlyRate=hourlyRate;
+	}
+
+	public double gethourlyRate()
+	{
+		return this.hourlyRate;
+	}
+
+
+	HourlyEmployee(String firstName, String surName, int staffNumber, double hoursWorked,double hourlyRate)
+	{
+		super(firstName,surName,staffNumber,0);
 		this.hoursWorked=hoursWorked;
 		this.hourlyRate=hourlyRate;
 
 	}
+
 }
