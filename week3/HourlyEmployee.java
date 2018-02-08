@@ -43,4 +43,19 @@ public class HourlyEmployee extends Employee
 
 	}
 
+	public double calculatePay()
+	{
+		return hourlyRate*hoursWorked;
+	}
+
+	public String toString()
+	{
+		String returnable="";
+		returnable=returnable+"This Employee is called "+super.getfirstName()+" "+super.getsurName()+"\n";
+		returnable=returnable+"Their staff number is "+super.getstaffNumber()+"\n";
+		returnable=returnable+"Their hourly pay is "+hourlyRate+"\n";
+		returnable=returnable+"They have worked "+hoursWorked+"\n";
+		return returnable;
+	}
+
 }
