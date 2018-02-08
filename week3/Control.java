@@ -13,12 +13,16 @@ class Control
 {
 	public static void main(String[] args)
 	{
-		Employee martha=new Employee("Martha","Jones",8,999.99);
+		Employee martha=new Employee("Martha","Jones",8,9999.99);
 		System.out.println(martha);
 		System.out.println(martha.calculatePay()+" is her monthly pay\n");
 
 		HourlyEmployee john=new HourlyEmployee("John","Smith",4,40,3.99);
 		System.out.println(john);
-		System.out.println(john.calculatePay()+" is her monthly pay");
+		System.out.println(john.calculatePay()+" is her pay");
+
+		CommissionEmployee fred=new CommissionEmployee("fred","Paul",10,40000,120);
+		System.out.println(fred);
+		System.out.println(fred.calculatePay()+" is her pay");
 	}
 }

@@ -23,7 +23,7 @@ public class CommissionEmployee extends Employee
 	public String toString()
 	{
 		String returnable=super.toString();
-		returnable=returnable+commissionEarned+" was his commission\n";
+		returnable=returnable+"\n"+commissionEarned+" was his commission\n";
 		return returnable;
 	}
 
