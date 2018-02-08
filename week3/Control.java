@@ -15,5 +15,6 @@ class Control
 	{
 		Employee martha=new Employee("Martha","Jones",8,999.99);
 		System.out.println(martha);
+		System.out.println(martha.calculatePay()+" is her monthly pay");
 	}
 }
