@@ -15,13 +15,29 @@ class Account
 	private int accountNumber;
 	private String sortCode;
 	private String branchName;
-	private boolean inCredit=true;
+	private boolean inCredit;
 	private double acctBalance;
+
+	//constructor
+	public Account(String accountName,int accountNumber,String sortCode, String branchName,double acctBalance)
+	{
+		this.accountName=accountName;
+		this.accountNumber=accountNumber;
+		this.sortCode=sortCode;
+		this.branchName=branchName;
+		this.acctBalance=acctBalance;
+		if(acctBalance<0)
+			this.inCredit=false;
+		else
+			this.inCredit=true;
+	}
 
 	//methods
 	public void deposit(double depAmount)
 	{
 		acctBalance=acctBalance+depAmount;
+		if(acctBalance>=0)
+			inCredit=true;
 	}
 
 	public void withdraw(double takeAmount)
