@@ -9,7 +9,7 @@ Java version: 1.8.0_162
 
 package com.labs.week4;
 
-class Account
+public class Account
 {
 	private String accountName;
 	private int accountNumber;
@@ -19,7 +19,7 @@ class Account
 	private double acctBalance;
 
 	//constructor
-	public Account(String accountName,int accountNumber,String sortCode, String branchName,double acctBalance)
+	Account(String accountName,int accountNumber,String sortCode, String branchName,double acctBalance)
 	{
 		this.accountName=accountName;
 		this.accountNumber=accountNumber;
@@ -106,6 +106,11 @@ class Account
 	public double getacctBalance()
 	{
 		return this.acctBalance;
+	}
+
+	public String toString()
+	{
+		return(accountName+","+accountNumber+","+sortCode+","+branchName+","+acctBalance);
 	}
 
 }
