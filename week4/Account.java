@@ -15,7 +15,7 @@ class Account
 	private int accountNumber;
 	private String sortCode;
 	private String branchName;
-	private boolean inCredit;
+	private boolean inCredit=true;
 	private double acctBalance;
 
 	//methods
@@ -27,6 +27,8 @@ class Account
 	public void withdraw(double takeAmount)
 	{
 		acctBalance=acctBalance-takeAmount;
+		if(acctBalance<0)
+			inCredit=false;
 	}
 
 	//setters and getters
