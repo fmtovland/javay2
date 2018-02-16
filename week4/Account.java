@@ -60,11 +60,6 @@ public class Account
 		return this.accountName;
 	}
 
-	public void setaccountNumber(int accountNumber)
-	{
-		this.accountNumber=accountNumber;
-	}
-
 	public int getaccountNumber()
 	{
 		return this.accountNumber;
