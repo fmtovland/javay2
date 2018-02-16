@@ -9,7 +9,7 @@ Java version: 1.8.0_162
 
 package com.labs.week4;
 
-public class Account
+public class Account implements ValidatedAccount
 {
 	private String accountName;
 	private static int lastAccount=1;	//the last account number given out
@@ -47,6 +47,16 @@ public class Account
 		acctBalance=acctBalance-takeAmount;
 		if(acctBalance<0)
 			inCredit=false;
+	}
+
+	public void getDetails()
+	{
+		System.out.println("Type: Account\nBalance: "+getacctBalance()+"\nName: "+getaccountName());
+	}
+
+	public void valuableAccount()
+	{
+		 System.out.println("Balance is "+getacctBalance());
 	}
 
 	//setters and getters

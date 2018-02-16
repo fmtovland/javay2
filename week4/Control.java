@@ -17,6 +17,8 @@ class Control
 		pete.deposit(5.00);
 		pete.withdraw(99.99);
 		System.out.println(pete);
+		pete.getDetails();
+		pete.valuableAccount();
 
 		DepositAccount marty=new DepositAccount("Marty Mcfly","XABX","Western",19.85,0.15);
 		marty.withdraw(9.99);
