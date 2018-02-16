@@ -13,11 +13,11 @@ class Control
 {
 	public static void main(String[] args)
 	{
-		Account pete=new Account("Peter pan",6,"NENL","Nowhere",999.99);
+		Account pete=new Account("Peter pan","NENL","Nowhere",999.99);
 		pete.withdraw(99.99);
 		System.out.println(pete);
 
-		DepositAccount marty=new DepositAccount("Marty Mcfly",7,"XABX","Western",19.85,0.15);
+		DepositAccount marty=new DepositAccount("Marty Mcfly","XABX","Western",19.85,0.15);
 		System.out.println(marty);
 	}
 }

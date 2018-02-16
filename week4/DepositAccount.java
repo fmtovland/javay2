@@ -14,9 +14,9 @@ public class DepositAccount extends Account
 	private double intrestRate;
 
 	//constructor
-	DepositAccount(String accountName,int accountNumber,String sortCode, String branchName,double acctBalance,double intrestRate)
+	DepositAccount(String accountName,String sortCode, String branchName,double acctBalance,double intrestRate)
 	{
-		super(accountName,accountNumber,sortCode,branchName,acctBalance);
+		super(accountName,sortCode,branchName,acctBalance);
 		this.intrestRate=intrestRate;
 	}
 

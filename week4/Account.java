@@ -12,6 +12,7 @@ package com.labs.week4;
 public class Account
 {
 	private String accountName;
+	private static int lastAccount=1;	//the last account number given out
 	private int accountNumber;
 	private String sortCode;
 	private String branchName;
@@ -19,10 +20,11 @@ public class Account
 	private double acctBalance;
 
 	//constructor
-	Account(String accountName,int accountNumber,String sortCode, String branchName,double acctBalance)
+	Account(String accountName,String sortCode, String branchName,double acctBalance)
 	{
 		this.accountName=accountName;
-		this.accountNumber=accountNumber;
+		this.accountNumber=lastAccount;
+		lastAccount++;
 		this.sortCode=sortCode;
 		this.branchName=branchName;
 		this.acctBalance=acctBalance;

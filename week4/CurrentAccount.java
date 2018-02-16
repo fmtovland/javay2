@@ -14,9 +14,9 @@ class CurrentAccount extends Account
 	private double penaltyAmount;
 
 	//constructor
-	public CurrentAccount(String accountName,int accountNumber,String sortCode, String branchName,double acctBalance,double penaltyAmount)
+	public CurrentAccount(String accountName,String sortCode, String branchName,double acctBalance,double penaltyAmount)
 	{
-		super(accountName,accountNumber,sortCode,branchName,acctBalance);
+		super(accountName,sortCode,branchName,acctBalance);
 		this.penaltyAmount=penaltyAmount;
 	}
 
