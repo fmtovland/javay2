@@ -9,7 +9,7 @@ Java version: 1.8.0_162
 
 package com.labs.week4;
 
-public class DepositAccount extends Account
+public class DepositAccount extends Account implements ValidatedAccount
 {
 	private double intrestRate;
 

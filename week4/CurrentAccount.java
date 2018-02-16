@@ -9,7 +9,7 @@ Java version: 1.8.0_162
 
 package com.labs.week4;
 
-class CurrentAccount extends Account
+class CurrentAccount extends Account implements ValidatedAccount
 {
 	private double penaltyAmount;
 
