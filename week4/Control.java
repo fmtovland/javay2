@@ -23,7 +23,9 @@ class Control
 		marty.deposit(50);
 		System.out.println(marty);
 
-		CurrentAccount tom=new CurrentAccount("Tom Seyer","BAAB","England",200,0);
+		CurrentAccount tom=new CurrentAccount("Tom Seyer","BAAB","England",-200,0);
+		tom.checkCredit();
+		tom.checkCredit("warning:account overdrawn");
 		System.out.println(tom);
 	}
 }
