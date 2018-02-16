@@ -22,15 +22,20 @@ class CurrentAccount extends Account
 
 
 	//methods
-	public String checkCredit()
+	public void checkCredit()
 	{
 		if(super.getinCredit())
-			return "Account is in credit";
+			System.out.println("Account is in credit");
 		else
-			return "Account is not in credit";
+			System.out.println("Account is not in credit");
 
 	}
 
+	public void checkCredit(String message)
+	{
+		if(!super.getinCredit())
+			System.out.println(message);
+	}
 
 	//setters getters
 	public void setpenaltyAmount(double penaltyAmount)

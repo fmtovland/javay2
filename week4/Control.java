@@ -22,5 +22,8 @@ class Control
 		marty.withdraw(9.99);
 		marty.deposit(50);
 		System.out.println(marty);
+
+		CurrentAccount tom=new CurrentAccount("Tom Seyer","BAAB","England",200,0);
+		System.out.println(tom);
 	}
 }
