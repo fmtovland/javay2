@@ -26,6 +26,7 @@ public class BasicScreen extends JFrame implements ActionListener
 		add(button1);
 		add(button2);
 		button1.addActionListener(this);
+		button2.addActionListener(this);
 
 		checkbox=new JCheckBox("ignore them?");
 		add(checkbox);
@@ -33,8 +34,13 @@ public class BasicScreen extends JFrame implements ActionListener
 		setVisible(true);	//forget this and the window wont appear
 	}
 
-	public void actionPerformed(ActionEvent event)
+	public void actionPerformed(ActionEvent event1)
 	{
-		System.out.println("button1 clicked");
+		if(event1.getActionCommand()=="Click me")
+			System.out.println("button1 clicked");
+		else if(event1.getActionCommand()=="No click me instead")
+			System.out.println("button2 clicked");
+
+//		System.out.println(event1.getActionCommand());
 	}
 }
