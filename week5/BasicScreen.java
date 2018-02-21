@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JCheckBox;
-
+import javax.swing.JOptionPane;
 
 public class BasicScreen extends JFrame implements ActionListener
 {
@@ -37,7 +37,11 @@ public class BasicScreen extends JFrame implements ActionListener
 	public void actionPerformed(ActionEvent event1)
 	{
 		if(event1.getActionCommand()=="Click me")
+		{
+			JOptionPane.showMessageDialog(this, "MyFirstevent!");
 			System.out.println("button1 clicked");
+		}
+
 		else if(event1.getActionCommand()=="No click me instead")
 			System.out.println("button2 clicked");
 
