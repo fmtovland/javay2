@@ -9,9 +9,10 @@ Java version: 1.8.0_162
 
 package com.labs.week4;
 
-public class Account
+public class Account implements ValidatedAccount
 {
 	private String accountName;
+	private static int lastAccount=1;	//the last account number given out
 	private int accountNumber;
 	private String sortCode;
 	private String branchName;
@@ -19,10 +20,11 @@ public class Account
 	private double acctBalance;
 
 	//constructor
-	Account(String accountName,int accountNumber,String sortCode, String branchName,double acctBalance)
+	Account(String accountName,String sortCode, String branchName,double acctBalance)
 	{
 		this.accountName=accountName;
-		this.accountNumber=accountNumber;
+		this.accountNumber=lastAccount;
+		lastAccount++;
 		this.sortCode=sortCode;
 		this.branchName=branchName;
 		this.acctBalance=acctBalance;
@@ -47,6 +49,16 @@ public class Account
 			inCredit=false;
 	}
 
+	public void getDetails()
+	{
+		System.out.println("Type: Account\nBalance: "+getacctBalance()+"\nName: "+getaccountName());
+	}
+
+	public void valuableAccount()
+	{
+		 System.out.println("Balance is "+getacctBalance());
+	}
+
 	//setters and getters
 	public void setaccountName(String accountName)
 	{
@@ -56,11 +68,6 @@ public class Account
 	public String getaccountName()
 	{
 		return this.accountName;
-	}
-
-	public void setaccountNumber(int accountNumber)
-	{
-		this.accountNumber=accountNumber;
 	}
 
 	public int getaccountNumber()

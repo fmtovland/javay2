@@ -13,11 +13,21 @@ class Control
 {
 	public static void main(String[] args)
 	{
-		Account pete=new Account("Peter pan",6,"NENL","Nowhere",999.99);
+		Account pete=new Account("Peter pan","NENL","Nowhere",999.99);
+		pete.deposit(5.00);
 		pete.withdraw(99.99);
 		System.out.println(pete);
+		pete.getDetails();
+		pete.valuableAccount();
 
-		DepositAccount marty=new DepositAccount("Marty Mcfly",7,"XABX","Western",19.85,0.15);
+		DepositAccount marty=new DepositAccount("Marty Mcfly","XABX","Western",19.85,0.15);
+		marty.withdraw(9.99);
+		marty.deposit(50);
 		System.out.println(marty);
+
+		CurrentAccount tom=new CurrentAccount("Tom Seyer","BAAB","England",-200,0);
+		tom.checkCredit();
+		tom.checkCredit("warning:account overdrawn");
+		System.out.println(tom);
 	}
 }

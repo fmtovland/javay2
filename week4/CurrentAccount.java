@@ -9,28 +9,33 @@ Java version: 1.8.0_162
 
 package com.labs.week4;
 
-class CurrentAccount extends Account
+class CurrentAccount extends Account implements ValidatedAccount
 {
 	private double penaltyAmount;
 
 	//constructor
-	public CurrentAccount(String accountName,int accountNumber,String sortCode, String branchName,double acctBalance,double penaltyAmount)
+	public CurrentAccount(String accountName,String sortCode, String branchName,double acctBalance,double penaltyAmount)
 	{
-		super(accountName,accountNumber,sortCode,branchName,acctBalance);
+		super(accountName,sortCode,branchName,acctBalance);
 		this.penaltyAmount=penaltyAmount;
 	}
 
 
 	//methods
-	public String checkCredit()
+	public void checkCredit()
 	{
 		if(super.getinCredit())
-			return "Account is in credit";
+			System.out.println("Account is in credit");
 		else
-			return "Account is not in credit";
+			System.out.println("Account is not in credit");
 
 	}
 
+	public void checkCredit(String message)
+	{
+		if(!super.getinCredit())
+			System.out.println(message);
+	}
 
 	//setters getters
 	public void setpenaltyAmount(double penaltyAmount)

@@ -9,14 +9,14 @@ Java version: 1.8.0_162
 
 package com.labs.week4;
 
-public class DepositAccount extends Account
+public class DepositAccount extends Account implements ValidatedAccount
 {
 	private double intrestRate;
 
 	//constructor
-	DepositAccount(String accountName,int accountNumber,String sortCode, String branchName,double acctBalance,double intrestRate)
+	DepositAccount(String accountName,String sortCode, String branchName,double acctBalance,double intrestRate)
 	{
-		super(accountName,accountNumber,sortCode,branchName,acctBalance);
+		super(accountName,sortCode,branchName,acctBalance);
 		this.intrestRate=intrestRate;
 	}
 
