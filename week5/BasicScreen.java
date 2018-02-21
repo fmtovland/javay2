@@ -43,7 +43,10 @@ public class BasicScreen extends JFrame implements ActionListener
 		}
 
 		else if(event1.getActionCommand()=="No click me instead")
+		{
 			System.out.println("button2 clicked");
+			JOptionPane.showMessageDialog(this, "My Second event!");
+		}
 
 //		System.out.println(event1.getActionCommand());
 	}
