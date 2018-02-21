@@ -54,13 +54,11 @@ public class BasicScreen extends JFrame implements ActionListener
 			JOptionPane.showMessageDialog(this, "My Second event!");
 		}
 
-		else if(event1.getActionCommand()=="Name")
+		else
 		{
-			JOptionPane.showMessageDialog(this, "you entered name");
+			JOptionPane.showMessageDialog(this, "you entered "+event1.getActionCommand());
 		}
 
-		 System.out.println(event1);
-
-//		System.out.println(event1.getActionCommand());
+		System.out.println(event1.paramString());
 	}
 }
