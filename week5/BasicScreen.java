@@ -3,10 +3,12 @@ package com.labs.week5;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 public class BasicScreen extends JFrame implements ActionListener
 {
@@ -31,6 +33,10 @@ public class BasicScreen extends JFrame implements ActionListener
 		checkbox=new JCheckBox("ignore them?");
 		add(checkbox);
 
+		JTextField box= new JTextField("Name");
+		box.addActionListener(this);
+		add(box);
+
 		setVisible(true);	//forget this and the window wont appear
 	}
 
@@ -47,6 +53,13 @@ public class BasicScreen extends JFrame implements ActionListener
 			System.out.println("button2 clicked");
 			JOptionPane.showMessageDialog(this, "My Second event!");
 		}
+
+		else if(event1.getActionCommand()=="Name")
+		{
+			JOptionPane.showMessageDialog(this, "you entered name");
+		}
+
+		 System.out.println(event1);
 
 //		System.out.println(event1.getActionCommand());
 	}
