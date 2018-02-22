@@ -83,7 +83,7 @@ public class BasicScreen extends JFrame implements MouseListener, ActionListener
 
 		else if(event1.getSource()==buttonOk)
 		{
-			JOptionPane.showMessageDialog(this, "you entered "+event1.getActionCommand());
+			JOptionPane.showMessageDialog(this, "you entered "+box.getText());
 		}
 
 	}
@@ -100,10 +100,12 @@ public class BasicScreen extends JFrame implements MouseListener, ActionListener
 
 	public void mouseEntered(MouseEvent event4)
 	{
+		mylabel.setText("Mouse Entered");
 	}
 
 	public void mouseExited(MouseEvent event5)
 	{
+		mylabel.setText("Mouse Exited");
 	}
 
 	public void mouseClicked(MouseEvent event6)
