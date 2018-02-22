@@ -16,7 +16,9 @@ public class BasicScreen extends JFrame implements ActionListener
 	JButton button2;
 
 	JCheckBox checkbox;
+
 	JTextField box;
+	JButton buttonOk;	//confirm button for text box
 
 	BasicScreen(String title)
 	{
@@ -35,8 +37,11 @@ public class BasicScreen extends JFrame implements ActionListener
 		add(checkbox);
 
 		JTextField box= new JTextField("Name");
+		buttonOk=new JButton("Ok");
 		box.addActionListener(this);
+		buttonOk.addActionListener(this);
 		add(box);
+		add(buttonOk);
 
 		setVisible(true);	//forget this and the window wont appear
 	}
@@ -55,12 +60,10 @@ public class BasicScreen extends JFrame implements ActionListener
 			JOptionPane.showMessageDialog(this, "My Second event!");
 		}
 
-		else if(event1.getSource()==box)
-
+		else if(event1.getSource()==buttonOk)
 		{
 			JOptionPane.showMessageDialog(this, "you entered "+event1.getActionCommand());
 		}
 
-		System.out.println(event1.getSource());
 	}
 }
