@@ -88,6 +88,12 @@ public class BasicScreen extends JFrame implements MouseListener, ActionListener
 	//implements MouseListener
 	public void mousePressed(MouseEvent event2)
 	{
+		if(event2.getButton()==1)
+			mylabel.setText("You left clicked");
+		else if(event2.getButton()==2)
+			mylabel.setText("You middle clicked");
+		else if(event2.getButton()==3)
+			mylabel.setText("You right clicked");
 	}
 
 	public void mouseReleased(MouseEvent event3)
