@@ -24,8 +24,7 @@ public class BasicScreen extends JFrame implements MouseListener, ActionListener
 
 	JCheckBox checkbox;
 
-	JTextField box;
-	JButton buttonOk;	//confirm button for text box
+	public JTextField box;
 
 	JPanel mypanel;
 	JLabel mylabel;
@@ -50,11 +49,8 @@ public class BasicScreen extends JFrame implements MouseListener, ActionListener
 
 		//the text field
 		JTextField box= new JTextField("Name");
-		buttonOk=new JButton("Ok");
 		box.addActionListener(this);
-		buttonOk.addActionListener(this);
 		add(box);
-		add(buttonOk);
 
 		//jpanel
 		mypanel=new JPanel();
@@ -81,9 +77,9 @@ public class BasicScreen extends JFrame implements MouseListener, ActionListener
 			JOptionPane.showMessageDialog(this, "My Second event!");
 		}
 
-		else if(event1.getSource()==buttonOk)
+		else
 		{
-			JOptionPane.showMessageDialog(this, "you entered "+box.getText());
+			JOptionPane.showMessageDialog(this, "you entered "+event1.getActionCommand());
 		}
 
 	}
