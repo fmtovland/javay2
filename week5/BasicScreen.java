@@ -96,12 +96,12 @@ public class BasicScreen extends JFrame implements MouseListener, ActionListener
 
 	public void mouseEntered(MouseEvent event4)
 	{
-		mylabel.setText("Mouse Entered");
+		mylabel.setText("Mouse Entered the panel");
 	}
 
 	public void mouseExited(MouseEvent event5)
 	{
-		mylabel.setText("Mouse Exited");
+		mylabel.setText("Mouse Exited the panel");
 	}
 
 	public void mouseClicked(MouseEvent event6)
