@@ -12,6 +12,9 @@ import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JPanel;
+import javax.swing.JLabel;
+
+import java.awt.Color;
 
 
 public class BasicScreen extends JFrame implements MouseListener, ActionListener
@@ -25,6 +28,7 @@ public class BasicScreen extends JFrame implements MouseListener, ActionListener
 	JButton buttonOk;	//confirm button for text box
 
 	JPanel mypanel;
+	JLabel mylabel;
 
 	BasicScreen(String title)
 	{
@@ -54,7 +58,10 @@ public class BasicScreen extends JFrame implements MouseListener, ActionListener
 
 		//jpanel
 		mypanel=new JPanel();
+		mylabel=new JLabel("The panel is here");
 		mypanel.addMouseListener(this);
+		mypanel.setBackground(Color.red);
+		mypanel.add(mylabel);
 		add(mypanel);
 
 		setVisible(true);	//forget this and the window wont appear
