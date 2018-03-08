@@ -16,8 +16,8 @@ import javax.swing.JLabel;
 
 class BasicScreen extends JFrame implements ActionListener
 {
-	public JTextField textbox1,textbox2;
-	public JButton button1;
+	public JTextField textbox1,textbox2,textbox3;
+	public JButton button1,button2;
 	public JLabel label1;
 
 	BasicScreen(String title)
@@ -43,12 +43,20 @@ class BasicScreen extends JFrame implements ActionListener
 		label1=new JLabel("");
 		add(label1);
 
+		//second textbox and button
+		textbox3=new JTextField(20);
+		button2=new JButton("OKAY");
+		textbox3.addActionListener(this);
+		button2.addActionListener(this);
+		add(textbox3);
+		add(button2);
 		setVisible(true);
 	}
 
 	public void actionPerformed(ActionEvent event1)
 	{
 		String content1="",content2="";	//the contents of both boxes
+		String[] content3;
 
 		if(event1.getSource()==button1)
 		{
@@ -59,6 +67,26 @@ class BasicScreen extends JFrame implements ActionListener
 				label1.setText("Contents of boxes are the same");
 			else
 				label1.setText("Contents of boxes are not the same");
+		}
+
+		if(event1.getSource()==button2)
+		{
+			boolean sucess=false;
+			content1=textbox1.getText();
+			content2=textbox3.getText();
+
+			content3=content1.split("\\s+");
+
+			for(int i=0; i<content3.length; i++)
+			{
+				if(content3[i].equals(content2))
+					sucess=true;
+			}
+
+			if(sucess)
+				label1.setText("string found in sentence");
+			else
+				label1.setText("string not found in sentence");
 		}
 	}
 }
