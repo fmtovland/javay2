@@ -13,12 +13,16 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 
+//files
+import java.io.FileNotFoundException;
+
 
 class BasicScreen extends JFrame implements ActionListener
 {
 	public JTextField textbox1,textbox2,textbox3;
-	public JButton button1,button2;
+	public JButton button1,button2,fbutton;
 	public JLabel label1;
+	public ReadFile filestring;
 
 	BasicScreen(String title)
 	{
@@ -51,6 +55,11 @@ class BasicScreen extends JFrame implements ActionListener
 		add(textbox3);
 		add(button2);
 		setVisible(true);
+
+		//read file button
+		fbutton=new JButton("read file");
+		fbutton.addActionListener(this);
+		add(fbutton);
 	}
 
 	public void actionPerformed(ActionEvent event1)
@@ -87,6 +96,20 @@ class BasicScreen extends JFrame implements ActionListener
 				label1.setText("string found in sentence");
 			else
 				label1.setText("string not found in sentence");
+		}
+
+		try
+		{
+			if(event1.getSource()==fbutton)
+			{
+				filestring=new ReadFile();
+				label1.setText(filestring.content);
+			}
+		}
+
+		catch(FileNotFoundException e)
+		{
+			System.out.println("USING THIS LANGUAGE IS LIKE BEING AT THE DMV!");
 		}
 	}
 }
