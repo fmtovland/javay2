@@ -6,10 +6,10 @@ class test
 {
 	public static void main(String[] args)
 	{
-		Date today= new Date(14,3,2018);
-		Job mechanic= new Job("Mechanic",12000);
+		Person p1=new Person("John","Smith",new Date(1,1,1970),"male");
+		Employee e1=new Employee("Stan","Lee",new Date(28,12,1922),"male",new Job("artist", 1000000),new Date(15,1,1939));
 
-		System.out.println(today);
-		System.out.println(mechanic);
+		System.out.println(p1+"\n");
+		System.out.println(e1);
 	}
 }

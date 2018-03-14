@@ -5,7 +5,7 @@ package com.labs.week8;
 class Job
 {
 	//attributes
-	private static int nextNumber=0;
+	private static int nextNumber=1;
 
 	private double salary;
 	private String role;
