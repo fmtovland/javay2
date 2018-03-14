@@ -12,7 +12,7 @@ class Job
 	private int jobID;
 
 	//constructer
-	Job(double salary, String role)
+	Job(String role, double salary)
 	{
 		//manual attributes
 		this.salary=salary;
