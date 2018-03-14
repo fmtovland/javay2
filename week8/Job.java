@@ -1,6 +1,7 @@
 //a class to represent an employment record
 
 package com.labs.week8;
+import java.lang.IllegalArgumentException;
 
 class Job
 {
@@ -14,9 +15,14 @@ class Job
 	//constructer
 	Job(String role, double salary)
 	{
+		FileProcessor checker=new FileProcessor();
+
 		//manual attributes
 		this.salary=salary;
-		this.role=role;
+		if(checker.in(role))
+			this.role=role;
+		else
+			throw new IllegalArgumentException("Role not in text file");
 
 		//automatic attributes
 		this.jobID=nextNumber;

@@ -1,6 +1,7 @@
 //a class to represent a date
 
 package com.labs.week8;
+import java.lang.IllegalArgumentException;
 
 class Date
 {
@@ -14,8 +15,13 @@ class Date
 	{
 		if(day>0 && day<=31)	//ensure valid day
 			this.day=day;
+		else
+			throw new IllegalArgumentException("Invalid Day");
+
 		if(month>0 && month<=12)	//ensure valid month
 			this.month=month;
+		else
+			throw new IllegalArgumentException("Invalid Month");
 
 		this.year=year;
 	}
