@@ -61,4 +61,14 @@ class Person
 		return this.gender;
 	}
 
+	//other methods
+	public String toString()
+	{
+		String returnme="";
+		returnme=returnme+"Name: "+firstName;
+		returnme=returnme+" "+surName+"\n";
+		returnme=returnme+"dob: "+dateOfBirth.toString()+"\n";
+		returnme=returnme+"Gender: "+gender;
+		return returnme;
+	}
 }
