@@ -52,6 +52,10 @@ class Employee extends Person
 
 	public String toString()
 	{
+		//print stuff to file
+		FileWriter.write2File(super.getFirstName()+" "+super.getSurName());
+
+		//return stuff
 		String returnme=super.toString()+"\n";
 		returnme=returnme+"Job: "+job.toString()+"\n";
 		returnme=returnme+"Personel Number: "+personelNumber+"\n";
