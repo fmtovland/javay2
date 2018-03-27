@@ -18,7 +18,7 @@ class gui extends JFrame implements ActionListener
 {
 	ArrayList people=new ArrayList(0);
 	JTextField firstnameBox, surnameBox, cityBox;
-	JButton addButton, showOutputButton;
+	JButton addButton, showOutputButton,deleteButton;
 	JLabel output;
 
 	gui(String title)
@@ -40,10 +40,13 @@ class gui extends JFrame implements ActionListener
 
 		addButton=new JButton("Add Person");
 		showOutputButton=new JButton("show people");
+		deleteButton=new JButton("clear array");
 		addButton.addActionListener(this);
 		showOutputButton.addActionListener(this);
+		deleteButton.addActionListener(this);
 		add(addButton);
 		add(showOutputButton);
+		add(deleteButton);
 
 		output=new JLabel("");
 		add(output);
@@ -69,6 +72,11 @@ class gui extends JFrame implements ActionListener
 			returnme=returnme+"</html>";
 
 			output.setText(returnme);
+		}
+
+		else if(event1.getSource()==deleteButton)
+		{
+			people=new ArrayList(0);
 		}
 	}
 }
