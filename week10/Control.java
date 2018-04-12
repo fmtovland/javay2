@@ -12,5 +12,8 @@ class Control
 			System.out.println("Russia is here");
 		else
 			System.out.println("Russia not here");
+
+//		myset.clearSet();
+//		myset.printSet();
 	}
 }

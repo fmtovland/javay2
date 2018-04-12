@@ -2,6 +2,7 @@ package com.labs.week10;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Arrays;
+import java.util.Collections;
 
 class TestHashSet
 {
@@ -32,5 +33,10 @@ class TestHashSet
 	boolean matchEntry(String country)
 	{
 		return europe.contains(country);
+	}
+
+	void clearSet()
+	{
+		europe=europe=new HashSet<String>();
 	}
 }
