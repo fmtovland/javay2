@@ -20,10 +20,17 @@ class TestHashSet
 		{
 			System.out.println(ittr.next());
 		}
+
+		System.out.println("\n");
 	}
 
 	void addEntry (String country)
 	{
 		europe.add(country);
+	}
+
+	boolean matchEntry(String country)
+	{
+		return europe.contains(country);
 	}
 }

@@ -8,5 +8,9 @@ class Control
 		myset.printSet();
 		myset.addEntry("vatican city");
 		myset.printSet();
+		if(myset.matchEntry("Russia"))
+			System.out.println("Russia is here");
+		else
+			System.out.println("Russia not here");
 	}
 }
